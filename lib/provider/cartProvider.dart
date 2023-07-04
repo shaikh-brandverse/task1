@@ -13,7 +13,7 @@ class CartProvider extends ChangeNotifier {
     int existingIndex = _cartItems.indexWhere((cartItem) => cartItem.id == product.id);
 
     if (existingIndex != -1) {
-    print("already exist");
+    // print("already exist");
 
     Fluttertoast.showToast(
         msg: "Item already exist",
