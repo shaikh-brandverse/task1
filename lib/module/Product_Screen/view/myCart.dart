@@ -5,7 +5,6 @@ import 'package:testproject/custom_components/customAppBar.dart';
 import 'package:testproject/custom_components/customButton.dart';
 import 'package:testproject/custom_components/customText.dart';
 import 'package:testproject/provider/cartProvider.dart';
-import 'package:testproject/utils/appNavigation.dart';
 import 'package:testproject/utils/app_colors.dart';
 import 'package:testproject/utils/assetsPath.dart';
 

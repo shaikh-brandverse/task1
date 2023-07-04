@@ -20,7 +20,7 @@ class ProductScreen extends StatefulWidget {
 
 class _ProductScreenState extends State<ProductScreen> {
   TextEditingController search = TextEditingController();
-  List<bool> toggle = List.generate(10, (index) => false);
+  // List<bool> toggle = List.generate(10, (index) => false);
 
   List<Product> mapList = [
     Product(
@@ -103,8 +103,7 @@ class _ProductScreenState extends State<ProductScreen> {
     );
   }
 
-  Widget productContainer(
-      {int? index, String? image, String? name, int? price}) {
+  Widget productContainer({int? index, String? image, String? name, int? price}) {
     return InkWell(
       onTap: () {
         AppNavigation.navigateTo(
@@ -118,7 +117,8 @@ class _ProductScreenState extends State<ProductScreen> {
                   id: mapList[index].id,
                   name: mapList[index].name,
                   price: mapList[index].price,
-                  quantity: 1),
+                  quantity: 1
+              ),
             ));
       },
       child: Container(
@@ -161,10 +161,10 @@ class _ProductScreenState extends State<ProductScreen> {
                     onTap: () {
                       context.read<CartProvider>().addToCart(mapList[index]);
                       setState(() {
-                        toggle[index!] = true;
+                        context.read<CartProvider>().toggle[index!] = true;
                       });
                     },
-                    child: toggle[index!] == true
+                    child: context.read<CartProvider>().toggle[index!] == true
                         ? const Icon(Icons.done)
                         : const Icon(Icons.add))
               ],

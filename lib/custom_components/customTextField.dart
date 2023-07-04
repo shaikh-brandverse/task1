@@ -54,7 +54,7 @@ class CustomTextField extends StatelessWidget {
           controller: controller,
           obscureText: obscureText,
           readOnly: readOnly ?? false,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w500
           ),
@@ -64,7 +64,7 @@ class CustomTextField extends StatelessWidget {
               filled: true,
               focusColor: AppColors.WhiteColor,
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.r),
+                borderRadius: BorderRadius.circular(40.r),
                 borderSide: BorderSide(color: AppColors.WhiteColor, width: 2.0),
               ),
               enabledBorder: OutlineInputBorder(

@@ -8,7 +8,7 @@ class CartProvider extends ChangeNotifier {
   List<Product> _cartItems = [];
   double shipmentCost = 0.0;
   List<Product> get cartItems => _cartItems;
-
+  List<bool> toggle = List.generate(10, (index) => false);
   void addToCart(Product product) {
     int existingIndex = _cartItems.indexWhere((cartItem) => cartItem.id == product.id);
 

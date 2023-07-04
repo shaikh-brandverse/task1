@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:testproject/custom_components/customBottomBar.dart';
 import 'package:testproject/provider/cartProvider.dart';
+import 'package:testproject/utils/app_colors.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor:AppColors.black.withOpacity(0.1),// Set your desired color here
+  ));
   runApp(const MyApp());
 }
 
